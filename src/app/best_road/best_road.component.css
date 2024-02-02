@@ -1,0 +1,23 @@
+body{
+  height: 100vh;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+h2{
+  cursor: pointer;
+  transition: all .40s ease;
+}
+h2:hover{
+  transform: translateX(-7px);
+  color: #89888C;
+  transition: 0.4s;
+}
+#viewDiv{
+  width: 100vw;
+  margin-top: 20px;
+  height: 80vh;
+
+}

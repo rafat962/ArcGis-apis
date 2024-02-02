@@ -1,0 +1,28 @@
+<nav>
+  <div class="main" [routerLink]="['']"><h3>Market Square</h3></div>
+  <div class="links">
+    <h4 [routerLink]="['']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"> All Branches </h4>
+    <h4 [routerLink]="['best_road']" routerLinkActive="active"> Best Road </h4>
+    <h4 [routerLink]="['service']" routerLinkActive="active"> Service Area </h4>
+    <h4 [routerLink]="['dashboard']" routerLinkActive="active"> Dashboard </h4>
+  </div>
+  <i (click)="drawer.toggle()"  class='bx bx-menu show'></i>
+</nav>
+<mat-sidenav-container class="sidenav-container" (click)="drawer.toggle()">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'side' : 'side'">
+    <mat-toolbar (click)="drawer.toggle()">Market Square</mat-toolbar>
+    <mat-nav-list (click)="drawer.toggle()">
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"> All Branches </a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['best_road']" routerLinkActive="active"> Best Road </a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['service']" routerLinkActive="active"> Service Area </a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['dashboard']" routerLinkActive="active"> Dashboard </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+
+
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

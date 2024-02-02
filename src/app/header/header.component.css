@@ -1,0 +1,125 @@
+*{
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  background-color: #89888C;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+.main{
+  cursor: pointer;
+  transition: all .40s ease;
+
+}
+.main:hover{
+  transform: translateX(-7px);
+  color: #F2F2F2;
+  transform: 0.4s;
+}
+.links{
+  display: flex;
+  gap: 1.2rem;
+  margin: auto;
+  padding-right: 100px;
+}
+.links h4{
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .40s ease;
+  text-decoration: none;
+
+}
+.links h4:hover{
+  transform: translateX(-7px);
+  color: #F2F2F2;
+  transform: 0.4s;
+}
+
+.active{
+  color: #F2F2F2;
+}
+
+i{
+  cursor: pointer;
+  font-size: 26px;
+}
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.show{
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .links {
+    display: none;
+  }
+  nav{
+    position: relative;
+  }
+  .show{
+    padding-left: 64%;
+    display: block;
+  }
+  .links h4 {
+    font-size: 16px;
+  }
+  h3{
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 706px) {
+  .links {
+    display: none;
+  }
+  nav{
+    position: relative;
+  }
+  .show{
+  padding-left: 64%;
+    display: block;
+  }
+  .links h4 {
+    font-size: 16px;
+  }
+  h3{
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 1200px) {
+  .links {
+    display: none;
+  }
+  nav{
+    position: relative;
+  }
+  .show{
+  padding-left: 77%;
+    display: block;
+  }
+  .links h4 {
+    font-size: 16px;
+  }
+  h3{
+    font-size: 20px;
+  }
+}
